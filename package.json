@@ -1,0 +1,16 @@
+{
+    "name": "from-container-to-kubernetes",
+    "version": "1.0.0",
+    "description": "node app using docker & k8s",
+    "author": "Nico Bustos <info@jnicobr.com>",
+    "license": "MIT",
+    "main": "app.js",
+    "keywords": [
+        "nodejs",
+        "bootstrap",
+        "express"
+    ],
+    "dependencies": {
+        "express": "^4.16.4"
+    }
+}
