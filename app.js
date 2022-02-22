@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+// Database connection
+const db = require('./db.js');
 
 // Base directory & ports
 const path = __dirname + '/views/';
