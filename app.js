@@ -24,8 +24,11 @@ router.get('/sharks', function (req, res) {
     res.sendFile(path + '/sharks.html');
 });
 
-// Mount app's assets & router
-app.use(express.static(path));
+app.engine('html', require('ejs').renderFile); // Map EJS template to HTML
+app.set('view engine', 'html'); // Set default view engine to HTML
+app.use(express.urlencoded({extended: true})); // Parse url parameters
+app.use(express.static(path)); // Router
+// Mount app's assets 
 app.use('/', router);
 
 // Listen to port 8080
