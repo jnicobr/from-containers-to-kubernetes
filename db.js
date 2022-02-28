@@ -2,11 +2,13 @@
 const mongoose = require('mongoose');
 
 // Declare URI variables
-const MONGO_USERNAME = 'jnicobr';
-const MONGO_PASSWORD = 'mongoPassword';
-const MONGO_HOSTNAME = '127.0.0.1';
-const MONGO_PORT = '27017';
-const MONGO_DB = 'sharkinfo';
+const {
+    MONGO_USERNAME,
+    MONGO_PASSWORD,
+    MONGO_HOSTNAME,
+    MONGO_PORT,
+    MONGO_DB 
+} = process.env;
 
 // Declare URI
 // authSource=admin is required to could use user & pass. Is the name of the db with the credentials
