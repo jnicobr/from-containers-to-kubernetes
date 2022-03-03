@@ -26,7 +26,15 @@ spec:
               key: MONGO_DB
               name: db-env
         - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: MONGO_PASSWORD
         - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: MONGO_USERNAME
         - name: MONGO_PORT
           valueFrom:
             configMapKeyRef:
